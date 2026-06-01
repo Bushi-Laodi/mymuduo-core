@@ -1,0 +1,28 @@
+The system is: Linux - 6.6.114.1-microsoft-standard-WSL2 - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /mnt/d/VSCode_cpp_compiler/mingw64/bin/g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+
+The CXX compiler identification is GNU, found in "/home/li/myproject/mymuduo/build/CMakeFiles/3.22.1/CompilerIdCXX/a.exe"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/li/myproject/mymuduo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2ea2d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2ea2d.dir/build.make CMakeFiles/cmTC_2ea2d.dir/build
+gmake[1]: Entering directory '/home/li/myproject/mymuduo/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ea2d.dir/testCXXCompiler.cxx.o
+/mnt/d/VSCode_cpp_compiler/mingw64/bin/g++.exe    -o CMakeFiles/cmTC_2ea2d.dir/testCXXCompiler.cxx.o -c /home/li/myproject/mymuduo/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_2ea2d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ea2d.dir/link.txt --verbose=1
+/mnt/d/VSCode_cpp_compiler/mingw64/bin/g++.exe CMakeFiles/cmTC_2ea2d.dir/testCXXCompiler.cxx.o -o cmTC_2ea2d 
+gmake[1]: Leaving directory '/home/li/myproject/mymuduo/build/CMakeFiles/CMakeTmp'
+
+
+
