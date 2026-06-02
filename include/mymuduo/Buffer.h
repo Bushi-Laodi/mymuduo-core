@@ -37,7 +37,7 @@ private:
     char* begin() ;
     const char* begin() const ;
     char* beginWrite() ;
-    void Buffer::ensureWritableBytes(size_t len);
+    void ensureWritableBytes(size_t len);
     void makeSpace(size_t len);
 
     std::vector<char> buffer_;

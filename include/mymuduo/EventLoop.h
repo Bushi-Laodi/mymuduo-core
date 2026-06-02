@@ -3,6 +3,8 @@
 #include <vector>
 #include <mutex>
 #include <atomic>
+#include <functional>
+#include "mymuduo/Timestamp.h"
 
 namespace mymuduo{
 

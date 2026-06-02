@@ -1,3 +1,0 @@
-/home/li/myproject/mymuduo/build/CMakeFiles/echoserver.dir
-/home/li/myproject/mymuduo/build/CMakeFiles/edit_cache.dir
-/home/li/myproject/mymuduo/build/CMakeFiles/rebuild_cache.dir

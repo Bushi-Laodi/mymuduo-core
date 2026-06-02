@@ -1,5 +1,5 @@
-#include "EPollPoller.h"
-#include "Channel.h"
+#include "mymuduo/EPollPoller.h"
+#include "mymuduo/Channel.h"
 #include <stdexcept>
 #include <cstring>
 #include <unistd.h>
@@ -24,6 +24,7 @@ EPollPoller::~EPollPoller()  {
 
 Timestamp EPollPoller::poll(int timeoutMs, ChannelList* activeChannels) {
     int numsEvents = epoll_wait(epollfd_, events_.data(), static_cast<int>(events_.size()), timeoutMs);
+    Timestamp now = Timestamp::now();
     if(numsEvents > 0){
         fillActiveChannels(numsEvents, activeChannels);
         if(numsEvents == static_cast<int>(events_.size())){
@@ -40,6 +41,7 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList* activeChannels) {
     else if(numsEvents < 0 && errno != EINTR){
         throw std::runtime_error("epoll_wait error");
     }
+    return now;
 }
 
 void EPollPoller::updateChannel(Channel* channel) {

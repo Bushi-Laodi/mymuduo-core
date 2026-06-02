@@ -40,7 +40,7 @@ void Channel::handleEventWithGuard(Timestamp receiveTime){
     if((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)){//如果发生了挂断，并且没有可读数据，才直接走 closeCallback_
         if(closeCallback_) closeCallback_();
     }
-    if(revents_ && EPOLLERR){// 如果发生错误
+    if(revents_ & EPOLLERR){// 如果发生错误
         if(errorCallback_) errorCallback_();
     }
     if(revents_ & (EPOLLIN | EPOLLPRI | EPOLLHUP)){//有可读事件 + 挂断状态的时候为读尽缓冲区

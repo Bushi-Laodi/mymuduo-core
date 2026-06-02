@@ -1,6 +1,7 @@
 #include <time.h>
+#include <sys/time.h>
 
-#include "Timestamp.h"
+#include "mymuduo/Timestamp.h"
 
 Timestamp::Timestamp() : microSecondsSinceEpoch_(0)
 {
@@ -13,12 +14,16 @@ Timestamp::Timestamp(int64_t microSecondsSinceEpoch)
 
 Timestamp Timestamp::now()
 {
-    return Timestamp(time(NULL));
+    timeval tv;
+    gettimeofday(&tv, nullptr);
+    int64_t seconds = tv.tv_sec;
+    return Timestamp(seconds * 1000 * 1000 + tv.tv_usec);
 }
 std::string Timestamp::toString() const
 {
     char buf[128] = {0};
-    tm *tm_time = localtime(&microSecondsSinceEpoch_);
+    time_t seconds = static_cast<time_t>(microSecondsSinceEpoch_ / (1000 * 1000));
+    tm *tm_time = localtime(&seconds);
     snprintf(buf, 128, "%4d/%02d/%02d %02d:%02d:%02d",
              tm_time->tm_year + 1900,
              tm_time->tm_mon + 1,

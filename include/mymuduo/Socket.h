@@ -17,10 +17,10 @@ public:
     int accept(InetAddress* peer);
     void shutdownWrite();
 
-    void setTCPNoDelat(bool on);
+    void setTcpNoDelay(bool on);
     void setReuseAddr(bool on);
     void setReusePort(bool on);
-    void steKeepAlive(bool on);
+    void setKeepAlive(bool on);
 
     static int createNonBlockingSocket();
 private:

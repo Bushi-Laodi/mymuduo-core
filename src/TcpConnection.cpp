@@ -1,6 +1,6 @@
-#include "TcpConnection.h"
-#include "EventLoop.h"
-#include "Socket.h"
+#include "mymuduo/TcpConnection.h"
+#include "mymuduo/EventLoop.h"
+#include "mymuduo/Socket.h"
 #include "mymuduo/Channel.h"
 #include <unistd.h>
 
@@ -16,8 +16,10 @@ TcpConnection::TcpConnection(EventLoop* loop, const std::string& name, int sockf
     channel_->setWriteCallback([this] { handleWrite(); });
     channel_->setCloseCallback([this] { handleClose(); });
     channel_->setErrorCallback([this] { handleError(); });
-    socket_->steKeepAlive(true);
+    socket_->setKeepAlive(true);
 }
+
+TcpConnection::~TcpConnection() = default;
 
 void TcpConnection::send(const std::string& message){
     if (state_ == kConnected) {

@@ -11,7 +11,7 @@
 namespace mymuduo
 {
 
-static int createNonBlockingSocket(){
+int Socket::createNonBlockingSocket(){
     int fd = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK | SOCK_CLOEXEC, IPPROTO_TCP);
     if(fd < 0){
         throw std::runtime_error("createNonBlockingSocket() err");
@@ -46,7 +46,7 @@ void Socket::shutdownWrite(){
     ::shutdown(fd_, SHUT_WR);
 }
 
-void Socket::setTCPNoDelat(bool on){
+void Socket::setTcpNoDelay(bool on){
     int op = on ? 1 : 0;
     ::setsockopt(fd_, IPPROTO_TCP, TCP_NODELAY, &op, sizeof(op));
 }
@@ -58,7 +58,7 @@ void Socket::setReusePort(bool on){
     int op = on ? 1 : 0;
     ::setsockopt(fd_, SOL_SOCKET, SO_REUSEPORT, &op, sizeof(op));
 }
-void Socket::steKeepAlive(bool on){
+void Socket::setKeepAlive(bool on){
     int op = on ? 1 : 0;
     ::setsockopt(fd_, SOL_SOCKET, SO_KEEPALIVE, &op, sizeof(op));
 }

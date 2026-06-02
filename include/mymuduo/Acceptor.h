@@ -16,17 +16,17 @@ public:
 
     void setNewConnectionCallback(NewConnectionCallback cb){ newConnectionCallback_ = cb; }
     void listen();
-    bool listenning(){return listenning_;}
+    bool listening(){return listening_;}
 
 
 private:
     void handleRead();
 
     EventLoop* loop_;
-    Socket acceptScoket_;
+    Socket acceptSocket_;
     Channel acceptChannel_;
     NewConnectionCallback newConnectionCallback_;
-    bool listenning_;
+    bool listening_;
 
 };
 }

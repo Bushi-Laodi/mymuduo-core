@@ -19,7 +19,7 @@ public:
 
     TcpConnection(EventLoop* loop, const std::string& name, int sockfd,
                   const InetAddress& local, const InetAddress& peer);
-    ~TcpConnection() {}
+    ~TcpConnection();
 
     EventLoop* getLoop() const { return loop_; }
     const std::string& name() const { return name_; }

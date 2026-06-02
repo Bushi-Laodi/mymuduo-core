@@ -1,4 +1,4 @@
-#pragma oce
+#pragma once
 #include "mymuduo/Poller.h"
 #include <sys/epoll.h>
 
@@ -7,12 +7,6 @@ namespace mymuduo{
 
     // 匿名命名空间，这些名字只在当前 .cpp 文件内部可见
     // 好处： 1、避免污染全局命名空间 2、避免和其他文件里的同名变量冲突
-namespace {
-const int kNew = -1;
-const int kAdded = 1;
-const int kDeleted = 2;
-}
-
 class EventLoop;
 class EPollPoller : public Poller{
 public:

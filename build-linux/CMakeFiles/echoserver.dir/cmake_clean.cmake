@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/echoserver.dir/examples/EchoServer.cpp.o"
+  "CMakeFiles/echoserver.dir/examples/EchoServer.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Acceptor.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Acceptor.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Buffer.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Buffer.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Channel.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Channel.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Connector.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Connector.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/EPollPoller.cpp.o"
+  "CMakeFiles/echoserver.dir/src/EPollPoller.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/EventLoop.cpp.o"
+  "CMakeFiles/echoserver.dir/src/EventLoop.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/EventLoopThread.cpp.o"
+  "CMakeFiles/echoserver.dir/src/EventLoopThread.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/EventLoopThreadPool.cpp.o"
+  "CMakeFiles/echoserver.dir/src/EventLoopThreadPool.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/InetAddress.cpp.o"
+  "CMakeFiles/echoserver.dir/src/InetAddress.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Poller.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Poller.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Socket.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Socket.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/TcpClient.cpp.o"
+  "CMakeFiles/echoserver.dir/src/TcpClient.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/TcpConnection.cpp.o"
+  "CMakeFiles/echoserver.dir/src/TcpConnection.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/TcpServer.cpp.o"
+  "CMakeFiles/echoserver.dir/src/TcpServer.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/TimerQueue.cpp.o"
+  "CMakeFiles/echoserver.dir/src/TimerQueue.cpp.o.d"
+  "CMakeFiles/echoserver.dir/src/Timestamp.cpp.o"
+  "CMakeFiles/echoserver.dir/src/Timestamp.cpp.o.d"
+  "echoserver"
+  "echoserver.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/echoserver.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
